@@ -7,13 +7,15 @@ public class RoomWithEquipment implements Room {
     private int chairs;
     private int screens;
     private int tables;
-    private int LAN_connections;
+    private int LANConnections;
 
-    public RoomWithEquipment(int roomNumber, int chairs, int screens, int tables, int LAN_connections) {
+
+    public RoomWithEquipment(int roomNumber, int chairs, int screens, int tables, int LANConnections) {
+        this.roomNumber = roomNumber;
         this.chairs = chairs;
         this.screens = screens;
         this.tables = tables;
-        this.LAN_connections = LAN_connections;
+        this.LANConnections = LANConnections;
     }
 
     public RoomWithEquipment(int roomNumber, int roomSize, String roomName) {
@@ -44,6 +46,38 @@ public class RoomWithEquipment implements Room {
 
     public void setRoomName(String roomName) {
         this.roomName = roomName;
+    }
+
+    public int getChairs() {
+        return this.chairs;
+    }
+
+    public void setChairs(int chairs) {
+        this.chairs = chairs;
+    }
+
+    public int getTables() {
+        return this.tables;
+    }
+
+    public void setTables(int tables) {
+        this.tables = tables;
+    }
+
+    public int getScreens() {
+        return this.screens;
+    }
+
+    public void setScreens(int screens) {
+        this.screens = screens;
+    }
+
+    public int getLANConnections() {
+        return this.LANConnections;
+    }
+
+    public void setLANConnections(int LANConnections) {
+        this.LANConnections = LANConnections;
     }
 
 }

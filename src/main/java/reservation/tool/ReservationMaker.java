@@ -8,16 +8,18 @@ public class ReservationMaker {
 
     // Singleton class to make reservations
     private static ReservationMaker instance = null;
+
+    // List of Reservation objects for a in-memory implementation
     private List<Reservation> reservations = new ArrayList<>();
 
     private ReservationMaker() {}
 
 
     // Method to make reservations
-    private void makeReservation(LocalDate timeslot, Customer reservingCustomer, Room reservedRoom)
+    private void makeReservation(LocalDate timeslot, Customer reservingCustomer, RoomWithEquipment reservedRoom)
     {
         // Make reservation as an object
-        Reservation newReservation = new Reservation(Customer reservingCustomer, Room reservedRoom, Date timeslot)
+        Reservation newReservation = new Reservation(reservingCustomer, reservedRoom, timeslot);
         // Add reservation to a database / list of Reservations
     }
  
